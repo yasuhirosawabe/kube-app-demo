@@ -1,0 +1,17 @@
+version: "2"
+services:
+  web:
+    build: "./web"
+    ports: ["3000:3000"]
+    depends_on: ["mongo"]
+    environment:
+      MONGO_USERNAME: root
+      MONGO_PASSWORD: root
+      MONGO_DB_NAME: customerdb
+      MONGO_HOST: mongo
+  mongo:
+    image: "mongo:4.1.13"
+    volumes: ["./db/data:/data/db"]
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root

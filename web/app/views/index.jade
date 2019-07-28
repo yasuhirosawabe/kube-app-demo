@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  div.container.mt-4
+    h1 一覧
+    h5 hostname: #{hostname}
+    table.table.mt-3
+      thead
+        tr
+          th #
+          th 名前
+          th 年齢
+          th アクション
+      tbody
+        each customer, idx in customers
+          tr
+            td #{idx+1}
+            td #{customer.name}
+            td #{customer.age}
+            td
+              a.btn.btn-danger(href='/?del='+customer._id) 削除

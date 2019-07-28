@@ -3,15 +3,17 @@
 ## DBのデプロイ
 
 ```
-# kubectl apply -f deploy/deployment-db.yaml
-# kubectl apply -f deploy/service-db.yaml
+# kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/kube-app-demo/master/deploy/deployment-db.yaml
+# kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/kube-app-demo/master/deploy/service-db.yaml
+# kubectl get all
 ```
 
 ## WEBのデプロイ
 
 ```
-# kubectl apply -f deploy/deployment-web.yaml
-# kubectl apply -f deploy/service-web.yaml
+# kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/kube-app-demo/master/deploy/deployment-web.yaml
+# kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/kube-app-demo/master/deploy/service-web.yaml
+# kubectl get all
 ```
 
 ## DBとWEBの削除

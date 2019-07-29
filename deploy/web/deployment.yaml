@@ -17,12 +17,12 @@ spec:
         app: web
     spec:
       containers:
-      - name: "web"
-        image: "usalab/kube-app-demo-web:0.0.1"
+      - name: web
+        image: usalab/kube-app-demo-web:0.0.1
         resources:
           limits:
-            memory: "256Mi"
-            cpu: "80m"
+            memory: 256Mi
+            cpu: 80m
         ports:
         - containerPort: 27017
         env:

@@ -3,16 +3,17 @@
 ## DBのデプロイ
 
 ```
-# kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/kube-app-demo/master/deploy/deployment-db.yaml
-# kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/kube-app-demo/master/deploy/service-db.yaml
+# kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/kube-app-demo/master/deploy/db/volume.yaml
+# kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/kube-app-demo/master/deploy/db/deployment.yaml
+# kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/kube-app-demo/master/deploy/db/service.yaml
 # kubectl get all
 ```
 
 ## WEBのデプロイ
 
 ```
-# kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/kube-app-demo/master/deploy/deployment-web.yaml
-# kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/kube-app-demo/master/deploy/service-web.yaml
+# kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/kube-app-demo/master/deploy/web/deployment.yaml
+# kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/kube-app-demo/master/deploy/web/service.yaml
 # kubectl get all
 ```
 
@@ -30,5 +31,6 @@ image: usalab/kube-app-demo-web:0.0.2
 ```
 # kubectl delete service db web
 # kubectl delete deployment db web
-# kubectl delete pvc db-pvc
+# kubectl delete pvc db
+# kubectl delete pv db
 ```

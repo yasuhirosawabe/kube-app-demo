@@ -1,0 +1,27 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: db
+spec:
+  storageClassName: hostpath
+  capacity:
+    storage: 10Gi
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Delete
+  hostPath:
+    path: /data/db
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: db
+spec:
+  storageClassName: hostpath
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  volumeName: db

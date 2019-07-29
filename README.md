@@ -20,10 +20,7 @@
 ## アップデート
 
 ```
-# kubectl edit deployment web
-image: usalab/kube-app-demo-web:0.0.1
- ↓↓↓変更↓↓↓
-image: usalab/kube-app-demo-web:0.0.2
+# kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/kube-app-demo/master/deploy/web/deployment-update.yaml
 ```
 
 ## DBとWEBの削除

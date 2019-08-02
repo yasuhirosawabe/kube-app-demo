@@ -41,7 +41,7 @@ Serviceの作成
 下記のコマンドを実行してVolumeを作成する。
 
 ```
-$ kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/kube-app-demo/master/deploy/db/volume.yaml
+$ kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/sample-app-for-kube-deploy/master/deploy/db/volume.yaml
 ```
 
 作成に成功すると、下記のコマンドで「PersistentVolume」と「PersistentVolumeClaim」が作成されていることが確認できる。
@@ -69,7 +69,7 @@ db        Bound     db        10Gi       RWO            hostpath       1d
 下記のコマンドでDatabaseをデプロイする。
 
 ```
-$ kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/kube-app-demo/master/deploy/db/deployment.yaml
+$ kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/sample-app-for-kube-deploy/master/deploy/db/deployment.yaml
 ```
 
 デプロイすると、「Deployment」「ReplicaSet」「Pod」がそれぞれ１つずつ作成される。作成されたかどうかは下記のコマンドで確認することができる。
@@ -123,7 +123,7 @@ volumeMounts:
 下記のコマンドで他の「Pod」からDatabaseの「Pod」に参照できるようエンドポイントを作成する。
 
 ```
-$ kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/kube-app-demo/master/deploy/db/service.yaml
+$ kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/sample-app-for-kube-deploy/master/deploy/db/service.yaml
 ```
 
 
@@ -154,8 +154,8 @@ DBのデプロイとは「Volume」の作成がないだけで、大きく違い
 下記のコマンドで「Deployment」と「Service」を作成する。
 
 ```
-$ kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/kube-app-demo/master/deploy/web/deployment.yaml
-$ kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/kube-app-demo/master/deploy/web/service.yaml
+$ kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/sample-app-for-kube-deploy/master/deploy/web/deployment.yaml
+$ kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/sample-app-for-kube-deploy/master/deploy/web/service.yaml
 ```
 
 ```
@@ -193,7 +193,7 @@ Deployment「deployment.apps/web」とReplicaSet「replicaset.apps/web-5674b7d8d
 ## アップデート
 
 ```
-# kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/kube-app-demo/master/deploy/web/deployment-update.yaml
+# kubectl apply -f https://raw.githubusercontent.com/yasuhirosawabe/sample-app-for-kube-deploy/master/deploy/web/deployment-update.yaml
 ```
 
 ## DBとWEBの削除

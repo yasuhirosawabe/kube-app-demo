@@ -187,7 +187,6 @@ Deployment「web」とReplicaSet「web-5674b7d8d6」が作成され、replica数
 
 ```
 http://localhost:3000
-
 ```
 
 でアプリにアクセスすることができます。

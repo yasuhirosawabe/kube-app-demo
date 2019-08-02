@@ -185,7 +185,12 @@ Deployment「web」とReplicaSet「web-5674b7d8d6」が作成され、replica数
 
 「ClusterIP」の場合はK8sクラスタ内で公開できるようネットワークが構成されますが、「LoadBalancer」の場合はクラスタ外部からアクセスできるようになります。
 
-「http://localhost:3000」でアプリにアクセスすることができます。
+```
+http://localhost:3000
+
+```
+
+でアプリにアクセスすることができます。
 
 ![キャプチャ](assets/image02.png)
 
